@@ -3,12 +3,10 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Home - Jeng Sushi</title>
-        <link rel="stylesheet" href="../css/Main.css">
+        <title>About - Jeng Sushi</title>
+        <link rel="stylesheet" href="../css/About.css">
     </head>
     <body>
-        <script type="module" src="../js/Main.js"></script>
-
         <!-- Outer Frame -->
         <div class = "outer-container">
             <!-- Header -->
@@ -190,46 +188,62 @@
                 </div>
             </div>
             <!-- End Header -->
-            <div class = "content-container">
-                <div class = "content-1">
-                    <div class = "text-container">
-                        <div class = "text-1">
-                            Eat <span style="color: #E83636;">Sushi</span><br />The Right Way
-                        </div>
-                        <div class = "text-2">
-                            We take pride in sourcing only the freshest and highest quality ingredients, ensuring each bite is a celebration of flavor and freshness. From succulent cuts of sashimi to meticulously crafted rolls, every dish reflects our dedication to authenticity and perfection. We offer you an <span style="font-size: 20px; font-weight: 700; color: #E83636;">unforgettable</span> experience. 
-                            <br /><span style="line-height: 40px;">What are you waiting for? </span>
-                        </div>
-                        <div class = "reserve-now-btn" id = "ref-btns" title = "RESERVATION">
-                            Reserve Now!
-                        </div>
+
+            <!-- Contents -->
+            <!-- Content 1 -->
+            <div class="content-1">
+                <div class = "content-header">
+                    Connecting With Us - Your Gateway to Sushi Satisfaction
+                </div>
+                <div class = "container">
+                    <div class = "text-1">
+                        Customer Feedback
                     </div>
-                    <div class = "image-container">
-                        <img src="../images/sashimi.png" title="Sashimi">
+                    <svg width="500" height="2" viewBox="0 0 500 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path opacity="0.8" d="M0 0L500 0V1.5L0 1.5L0 0Z" fill="#E2E8F0"/>
+                    </svg> 
+                    <div class = "text-2">
+                        At JENG SUSHI, your satisfaction is our top priority. We greatly value the feedback and opinions of our customers, as they help us continually improve and provide you with an exceptional dining experience. Here's what some of our valued customers have to say about their experiences with us.
                     </div>
                 </div>
-                <svg width="1000" height="2" viewBox="0 0 1000 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path opacity="0.8" d="M0 0L1000 0V1.5L0 1.5L0 0Z" fill="#E2E8F0"/>
-                </svg>
-                <div class = "content-2">
-                    <div class = "header">
-                        Here are some of our specialties
+            </div>
+            <!-- Content 2 -->
+            <div class="content-2">
+                <div class = "content-header-container">
+                    <div class = "content-header">
+                        Basic Information
                     </div>
-                    <div class = "container">
-                        <div class = "image-frame">
-                            <img src="../images/tunasushi.png">
-                            <div>Tuna Nigiri</div>
+                </div>
+                <div class = "lower-outer-container">
+                    <div class = "left-container">
+                        <div class = "description-container">
+                            <div class = "description-1">
+                                We strive to offer delicious options
+                            </div>
+                            <div class = "description-2">
+                                We handle the information entered by customers on our site, as well as information provided by other methods, receiving and storing it.
+                            </div>
                         </div>
-                        <div class = "image-frame">
-                            <img src="../images/salmonsushi.png">
-                            <div>Salmon Sushi</div>
+                        <div class = "left-bottom-container">
+                            <form class = "input-field-container">
+                                <input class = "input-field" type="text" id="name" name="name" required><br>
+                                <input class = "input-field" type="email" id="email" name="email" required><br>
+                                <textarea class = "input-field" id="comment" name="comment" rows="1" required></textarea><br>
+                            </form>
                         </div>
-                        <div class = "image-frame">
-                            <img src="../images/tamagosushi.png">
-                            <div>Tamago Sushi</div>
+                        <div class = "send-btn">
+                            Send
+                        </div>
+                        <div class = "submission-comment">
+                            Your submission has been submitted.
                         </div>
                     </div>
-                </div>  
+                    <!-- Create img map -->
+                    <img src="../images/location.png" alt="Our Location" usemap="#workmap">
+                    <map name="workmap">
+                        <area shape="circle" coords="164,180,80" alt="Our Location" href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fchamonixallyear.com%2Fabout-us%2Fchamonix-all-year-details%2Flocation%2F&psig=AOvVaw3AUAWEB3C6CHvXrwCVBity&ust=1714837406351000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCMiE06Xp8YUDFQAAAAAdAAAAABAE">
+                    </map>
+                </div>
             </div>
             <!-- Footer -->
             <div class = "footer-container">
@@ -254,13 +268,12 @@
                     </div>
                 </div>
             </div>
-        </div>    
-
+        </div>
+            
         <!-- Assign links to button -->
         <script type="module">
-            import { start } from "../js/Main.js";
+            import { start } from "../js/About.js";
             start();
         </script>
-
     </body>
 </html>
