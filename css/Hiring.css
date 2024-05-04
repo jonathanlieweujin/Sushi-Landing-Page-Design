@@ -106,7 +106,6 @@ body {
 
 /* Content */
 .content-1{
-    background-image: url("../images/grainy_bg.png");
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -118,12 +117,12 @@ body {
     flex-grow: 0;
 }
 
-.content-1 .header-1{
+.content-1 .header{
     font-family: 'Inter';
     font-style: normal;
     font-weight: 700;
-    font-size: 48px;
-    line-height: 58px;
+    font-size: 40px;
+    line-height: 60px;
     text-align: center;
     letter-spacing: 0.08em;
     color: #F6F6F6;
@@ -132,139 +131,229 @@ body {
     flex-grow: 0;
 }
 
-.content-1 .outer-container{
+.job-container{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    padding: 0px;
-    gap: 32px;
-    width: 774px;
+    padding: 32px;
+    gap: 20px;
+    width: 744px;
+    background: #F6F6F6;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
     flex: none;
     order: 1;
     flex-grow: 0;
 }
 
-.content-1 .header-2{
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 40px;
-    line-height: 48px;
-    text-align: center;
-    letter-spacing: 0.08em;
-    color: #F6F6F6;
+.job-container .left-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 12px;
+    width: 400px;
     flex: none;
     order: 0;
     flex-grow: 0;
 }
 
-.content-1 .description{
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 29px;
-    text-align: center;
-    letter-spacing: 0.08em;
-    color: #F6F6F6;
-    flex: none;
-    align-self: stretch;
-    flex-grow: 0;
-}
-
-.content-1 .header-3{
+.job-name{
     font-family: 'Inter';
     font-style: normal;
     font-weight: 600;
-    font-size: 32px;
-    line-height: 39px;
-    text-align: center;
-    letter-spacing: 0.08em;
-    color: #E83636;
+    font-size: 36px;
+    line-height: 44px;
+    letter-spacing: 0.05em;
+    color: #242526;
     flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.job-description{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.03em;
+    color: #242526;
+    flex: none;
+    order: 1;
     align-self: stretch;
     flex-grow: 0;
 }
 
-.mission-vision-outer-container{
+.job-details{
+    width: 200px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 32px;
+}
+
+.next-btn:hover path {
+    fill: #5d108a;
+    transition: fill 300ms ease;
+}
+
+.next-btn:hover {
+    cursor: pointer;
+}
+
+.content-2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 64px 0px;
+    gap: 60px;
+    width: 100%;
+    background: #F9F2B0;
+    flex: none;
+    order: 3;
+    flex-grow: 0;
+}
+
+.content-2 .header-1{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 45px;
+    /* identical to box height */
+    text-align: center;
+    letter-spacing: 0.08em;
+    color: #242526;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.content-2 .header-2{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 50px;
+    text-align: center;
+    letter-spacing: 0.08em;
+    color: #242526;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.benefits-container{
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: flex-start;
     padding: 0px;
-    gap: 24px;
-    width: 774px;
+    gap: 18px;
+    width: 744px;
     flex: none;
+    order: 1;
     flex-grow: 0;
 }
 
-.mission-vision-inner-container{
-    display: block;
+.benefits-frame{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px;
+    gap: 16px;
+    width: 236px;
+    background: #242526;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.benefits-description{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: #E2E8F0;
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.benefits-svg:hover path{
+    fill: #E83636;
+    transition: fill 300ms ease;
+}
+
+.lower-outer-container{
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 0px;
-    gap: 12px;
-    width: 375px;
+    gap: 20px;
     flex: none;
+    order: 2;
     flex-grow: 0;
 }
 
-.content-1 .header-4{
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 32px;
-    line-height: 39px;
-    text-align: center;
-    letter-spacing: 0.15em;
-    color: #FFFFFF;
-}
-
-.mission-vision-inner-container .frame img{
-    filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.25));
-    filter: brightness(20%);
-    box-sizing: border-box;
-    border: 0.7px solid #FFFFFF;
-    border-radius: 20px;
-}
-
-.mission-vision-inner-container .frame{
-    position: relative;
-    display: block;
-    width: 100%;
+.why-join-us-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 18px;
+    width: 726px;
     flex: none;
+    order: 1;
     flex-grow: 0;
 }
 
-.mission-vision-inner-container .frame .header-4{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-}
-
-.core-values-outer-container{
-    position: relative;
-    width: 774px;
-    flex: none;
-    flex-grow: 0;
-}
-
-.core-values-outer-container .core-values-inner-container{
+.why-join-us-frame{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 32px;
+    padding: 24px;
     gap: 20px;
-    width: 650px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    background: rgba(37, 37, 38, 0.9);
+
+    width: 168px;
+    border-radius: 20px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.why-join-us-frame div{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: #242526;
+}
+.why-join-us-svg:hover path{
+    fill: #2a7d0f;
+    transition: fill 300ms ease;
+}
+
+.content-1 img{
+    background: transparent;
 }
 /* End Content */
 

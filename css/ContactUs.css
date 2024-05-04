@@ -106,7 +106,6 @@ body {
 
 /* Content */
 .content-1{
-    background-image: url("../images/grainy_bg.png");
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -115,156 +114,235 @@ body {
     width: 100%;
     flex: none;
     order: 2;
+    align-self: stretch;
     flex-grow: 0;
 }
 
-.content-1 .header-1{
+.content-header{
     font-family: 'Inter';
     font-style: normal;
     font-weight: 700;
-    font-size: 48px;
-    line-height: 58px;
-    text-align: center;
+    font-size: 28px;
+    line-height: 34px;
     letter-spacing: 0.08em;
-    color: #F6F6F6;
+    color: #FFFFFF;
     flex: none;
     order: 0;
     flex-grow: 0;
 }
 
-.content-1 .outer-container{
+.content-1 .container{
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    padding: 0px;
-    gap: 32px;
-    width: 774px;
+    padding: 32px;
+    gap: 20px;
+    width: 40%;
+    min-width: 550px;
+    border: 1px solid #E2E8F0;
     flex: none;
     order: 1;
     flex-grow: 0;
 }
 
-.content-1 .header-2{
+.content-1 .container .text-1{
     font-family: 'Inter';
     font-style: normal;
-    font-weight: 700;
-    font-size: 40px;
-    line-height: 48px;
     text-align: center;
-    letter-spacing: 0.08em;
-    color: #F6F6F6;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 44px;
+    letter-spacing: 0.05em;
+    color: #E2E8F0;
     flex: none;
     order: 0;
     flex-grow: 0;
 }
 
-.content-1 .description{
+.text-2{
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
-    font-size: 24px;
-    line-height: 29px;
+    font-size: 20px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
     text-align: center;
-    letter-spacing: 0.08em;
-    color: #F6F6F6;
+    letter-spacing: 0.03em;
+    color: #FFFFFF;
     flex: none;
+    order: 2;
     align-self: stretch;
     flex-grow: 0;
 }
 
-.content-1 .header-3{
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 32px;
-    line-height: 39px;
-    text-align: center;
-    letter-spacing: 0.08em;
-    color: #E83636;
+.content-2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 64px 0px;
+    gap: 72px;
+    width: 100%;
+    background: #F9F2B0;
     flex: none;
+    order: 2;
     align-self: stretch;
     flex-grow: 0;
 }
 
-.mission-vision-outer-container{
+.content-header-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px;
+    gap: 10px;
+    width: 40%;
+    min-width: 850px;
+    background: #242526;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.lower-outer-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px;
+    min-width: 900px;
+    width: 40%;
+    height: 327px;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.left-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    gap: 32px;
+    margin: 0 auto;
+    width: 521px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.left-bottom-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    gap: 32px;
+    margin: 0 auto;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.input-field-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0px;
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.input-field{
+    width: 30%;
+    height: 50px;
+    padding-left: 5px;
+}
+
+.send-btn{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: flex-start;
-    padding: 0px;
-    gap: 24px;
-    width: 774px;
-    flex: none;
-    flex-grow: 0;
-}
-
-.mission-vision-inner-container{
-    display: block;
-    display: flex;
-    flex-direction: column;
     align-items: center;
-    padding: 0px;
-    gap: 12px;
-    width: 375px;
+    padding: 10px;
+    max-width: 100%;
+    background: #242526;
     flex: none;
+    order: 1;
+    align-self: stretch;
     flex-grow: 0;
-}
 
-.content-1 .header-4{
     font-family: 'Inter';
     font-style: normal;
-    font-weight: 700;
-    font-size: 32px;
-    line-height: 39px;
-    text-align: center;
-    letter-spacing: 0.15em;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+
     color: #FFFFFF;
 }
 
-.mission-vision-inner-container .frame img{
-    filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.25));
-    filter: brightness(20%);
-    box-sizing: border-box;
-    border: 0.7px solid #FFFFFF;
-    border-radius: 20px;
+.send-btn{
+    cursor: pointer;
 }
 
-.mission-vision-inner-container .frame{
-    position: relative;
-    display: block;
-    width: 100%;
-    flex: none;
-    flex-grow: 0;
-}
-
-.mission-vision-inner-container .frame .header-4{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-}
-
-.core-values-outer-container{
-    position: relative;
-    width: 774px;
-    flex: none;
-    flex-grow: 0;
-}
-
-.core-values-outer-container .core-values-inner-container{
+.description-container{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding: 32px;
-    gap: 20px;
-    width: 650px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    background: rgba(37, 37, 38, 0.9);
+    align-items: flex-start;
+    padding: 0px;
+    gap: 12px;
+    width: 100%;
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.description-1{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 34px;
+    letter-spacing: 0.04em;
+    color: #242526;
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.description-2{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: #242526;
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.submission-comment{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 15px;
+    color: #0e6617;
+    flex: none;
+    order: 2;
+    align-self: stretch;
+    flex-grow: 0;
 }
 /* End Content */
 
@@ -327,3 +405,4 @@ body {
     order: 1;
     flex-grow: 0;
 }
+
