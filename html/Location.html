@@ -3,12 +3,10 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Home - Jeng Sushi</title>
-        <link rel="stylesheet" href="../css/Main.css">
+        <title>Hiring - Jeng Sushi</title>
+        <link rel="stylesheet" href="../css/Location.css">
     </head>
     <body>
-        <script type="module" src="../js/Main.js"></script>
-
         <!-- Outer Frame -->
         <div class = "outer-container">
             <!-- Header -->
@@ -190,46 +188,107 @@
                 </div>
             </div>
             <!-- End Header -->
-            <div class = "content-container">
-                <div class = "content-1">
-                    <div class = "text-container">
-                        <div class = "text-1">
-                            Eat <span style="color: #E83636;">Sushi</span><br />The Right Way
+
+            <!-- Contents -->
+            <div class = "content-1">
+                <div class="header">
+                    Find The Nearest Store
+                </div>
+                <div class = "description">
+                    Welcome to our convenient store locator tool! At JENG SUSHI, we strive to make our products feel more accessible to you. Use our easy-to-navigate store locator tool to find the nearest store from your location. If you're craving delicious sushi, authentic Japanese ingredients, or any other products we offer, you can satisfy your appetite with just a few clicks.
+                </div>
+            </div>
+            <div class = "content-2">
+                <div class = "header" style = "color: #242526;">
+                    Are You Ready To Search Nearby?
+                </div>
+                <div class = "description" style = "color: #242526;">
+                    Click on the search bar, enter your location, and embark on a culinary journey with us. We look forward to welcoming you at the nearest JENG SUSHI store!
+                </div>
+                <div class = "lower-outer-container">
+                    <div class = "top-container">
+                        <div class = "container">
+                            <div>
+                                Your location
+                            </div>
+                            <input class = "input-field" required><br>
                         </div>
-                        <div class = "text-2">
-                            We take pride in sourcing only the freshest and highest quality ingredients, ensuring each bite is a celebration of flavor and freshness. From succulent cuts of sashimi to meticulously crafted rolls, every dish reflects our dedication to authenticity and perfection. We offer you an <span style="font-size: 20px; font-weight: 700; color: #E83636;">unforgettable</span> experience. 
-                            <br /><span style="line-height: 40px;">What are you waiting for? </span>
+                        <div class = "container">
+                            <div>
+                                Search radius
+                            </div>
+                            <select>
+                                <option value="10">10km</option>
+                                <option value="25">25km</option>
+                                <option value="50" selected>50km</option>
+                                <option value="100">100km</option>
+                                <option value="200">200km</option>
+                            </select>
                         </div>
-                        <div class = "reserve-now-btn" id = "ref-btns" title = "RESERVATION">
-                            Reserve Now!
+                        <div class = "search-btn">
+                            Search
                         </div>
                     </div>
-                    <div class = "image-container">
-                        <img src="../images/sashimi.png" title="Sashimi">
+                    <div class = "lower-container">
+                        <div class = "left-container">
+                            <div class = "outlet-container">
+                                <div class = "description" id = "header">
+                                    Jeng Sushi @ SS2
+                                    <!-- Address -->
+                                    <div class = "description">
+                                        4, Jalan SS 2/66, SS 2
+                                        Petaling Jaya, Selangor 47300
+                                        Malaysia
+                                    </div>
+                                </div>
+                                <div class = "description">
+                                    0km<br />Directions
+                                </div>
+                            </div>
+                            <div class = "outlet-container">
+                                <div class = "description" id = "header">
+                                    Jeng Sushi @ Kota Damansara
+                                    <!-- Address -->
+                                    <div class = "description">
+                                        23-1, Jalan PJU 5/15, Dataran Sunway,
+                                        Petaling Jaya, Selangor 47810
+                                        Malaysia
+                                    </div>
+                                </div>
+                                <div class = "description">
+                                    4.8km<br />Directions
+                                </div>
+                            </div>
+                            <div class = "outlet-container">
+                                <div class = "description" id = "header">
+                                    Jeng Sushi @ Puchong
+                                    <!-- Address -->
+                                    <div class = "description">
+                                        No .12G , Jalan, Persiaran Puteri 1, Bandar Puteri,
+                                        Puchong, Selangor 47100
+                                        Malaysia
+                                    </div>
+                                </div>
+                                <div class = "description">
+                                    10.6km<br />Directions
+                                </div>
+                            </div>
+                            <div class = "outlet-container">
+                                <div class = "description" id = "header">
+                                    Jeng Sushi @ Kampar
+                                    <!-- Address -->
+                                    <div class = "description">
+                                        No. 5 & 6, Jalan Batu Karang, Off, Jalan Batu Sinar, 31900 Kampar, Perak
+                                    </div>
+                                </div>
+                                <div class = "description">
+                                    140km<br />Directions
+                                </div>
+                            </div>
+                        </div>
+                        <img src="../images/map.png">
                     </div>
                 </div>
-                <svg width="1000" height="2" viewBox="0 0 1000 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path opacity="0.8" d="M0 0L1000 0V1.5L0 1.5L0 0Z" fill="#E2E8F0"/>
-                </svg>
-                <div class = "content-2">
-                    <div class = "header">
-                        Here are some of our specialties
-                    </div>
-                    <div class = "container">
-                        <div class = "image-frame">
-                            <img src="../images/tunasushi.png">
-                            <div>Tuna Nigiri</div>
-                        </div>
-                        <div class = "image-frame">
-                            <img src="../images/salmonsushi.png">
-                            <div>Salmon Sushi</div>
-                        </div>
-                        <div class = "image-frame">
-                            <img src="../images/tamagosushi.png">
-                            <div>Tamago Sushi</div>
-                        </div>
-                    </div>
-                </div>  
             </div>
             <!-- Footer -->
             <div class = "footer-container">
@@ -254,13 +313,12 @@
                     </div>
                 </div>
             </div>
-        </div>    
-
+        </div>
+            
         <!-- Assign links to button -->
         <script type="module">
-            import { start } from "../js/Main.js";
+            import { start } from "../js/Location.js";
             start();
         </script>
-
     </body>
 </html>

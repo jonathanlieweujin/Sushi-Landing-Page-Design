@@ -4,11 +4,9 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Home - Jeng Sushi</title>
-        <link rel="stylesheet" href="../css/Main.css">
+        <link rel="stylesheet" href="../css/Reservation.css">
     </head>
     <body>
-        <script type="module" src="../js/Main.js"></script>
-
         <!-- Outer Frame -->
         <div class = "outer-container">
             <!-- Header -->
@@ -190,47 +188,65 @@
                 </div>
             </div>
             <!-- End Header -->
-            <div class = "content-container">
-                <div class = "content-1">
-                    <div class = "text-container">
-                        <div class = "text-1">
-                            Eat <span style="color: #E83636;">Sushi</span><br />The Right Way
+            
+            <!-- Content -->
+            <div class = "content">
+                <div class = "header">
+                    Make a Reservation
+                </div>
+
+                <div class = "reservation-container">
+                    <div class = "input-container">
+                        <div class = "item">
+                            Location
+                            <select class = "field">
+                                <option value="Kampar" selected>Kampar</option>
+                                <option value="SS2">SS2</option>
+                                <option value="Kota Damansara">Kota Damansara</option>
+                                <option value="Puchong">Puchong</option>
+                            </select>
                         </div>
-                        <div class = "text-2">
-                            We take pride in sourcing only the freshest and highest quality ingredients, ensuring each bite is a celebration of flavor and freshness. From succulent cuts of sashimi to meticulously crafted rolls, every dish reflects our dedication to authenticity and perfection. We offer you an <span style="font-size: 20px; font-weight: 700; color: #E83636;">unforgettable</span> experience. 
-                            <br /><span style="line-height: 40px;">What are you waiting for? </span>
+
+                        <div class = "item">
+                            Pax
+                            <div class = "field" id = "pax-field">
+                                <div id = "pax-value">Pax</div> 
+                            </div>
                         </div>
-                        <div class = "reserve-now-btn" id = "ref-btns" title = "RESERVATION">
-                            Reserve Now!
+
+                        <div class = "item">
+                            Date
+                            <input class = "field" type="date" >
+                        </div>
+
+                        <div class = "item">
+                            Timeslot
+                            <select class = "field">
+                                <option value="12" selected>12.00 PM</option>
+                                <option value="1430">02.00 PM</option>
+                                <option value="1600">04.00 PM</option>
+                                <option value="1900">07.00 PM</option>
+                            </select>
                         </div>
                     </div>
-                    <div class = "image-container">
-                        <img src="../images/sashimi.png" title="Sashimi">
+                    <div class = "reserve-btn">
+                        Reserve
                     </div>
                 </div>
-                <svg width="1000" height="2" viewBox="0 0 1000 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path opacity="0.8" d="M0 0L1000 0V1.5L0 1.5L0 0Z" fill="#E2E8F0"/>
-                </svg>
-                <div class = "content-2">
-                    <div class = "header">
-                        Here are some of our specialties
+                <div class = "lower-container">
+                    <svg class = "arrow-svg" id = "back" width="40" height="41" viewBox="0 0 40 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20 1.76208C9.645 1.76208 1.25 10.1571 1.25 20.5121C1.25 30.8671 9.645 39.2621 20 39.2621C30.355 39.2621 38.75 30.8671 38.75 20.5121C38.75 10.1571 30.355 1.76208 20 1.76208ZM30.625 23.9046H18.9419V30.5121L9.375 20.5121L18.9419 10.5121V17.4765H30.625V23.9046Z" fill="#E2E8F0"/>
+                    </svg>
+                    <div id = "scrollable-div">
+                        <img src="../images/reserve-2.png">
                     </div>
-                    <div class = "container">
-                        <div class = "image-frame">
-                            <img src="../images/tunasushi.png">
-                            <div>Tuna Nigiri</div>
-                        </div>
-                        <div class = "image-frame">
-                            <img src="../images/salmonsushi.png">
-                            <div>Salmon Sushi</div>
-                        </div>
-                        <div class = "image-frame">
-                            <img src="../images/tamagosushi.png">
-                            <div>Tamago Sushi</div>
-                        </div>
-                    </div>
-                </div>  
+                    <svg class = "arrow-svg" id = "next" width="40" height="41" viewBox="0 0 40 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20 1.76208C30.355 1.76208 38.75 10.1571 38.75 20.5121C38.75 30.8671 30.355 39.2621 20 39.2621C9.645 39.2621 1.25 30.8671 1.25 20.5121C1.25 10.1571 9.645 1.76208 20 1.76208ZM9.375 23.9046H21.0581V30.5121L30.625 20.5121L21.0581 10.5121V17.4765H9.375V23.9046Z" fill="#E2E8F0"/>
+                    </svg>
+                </div>
             </div>
+            <!-- End Content -->
+            
             <!-- Footer -->
             <div class = "footer-container">
                 <div class = "frame">
@@ -254,11 +270,33 @@
                     </div>
                 </div>
             </div>
-        </div>    
+        </div> 
+        
+        <!-- layer to darken and block website -->
+        <div class = "overlay-website" id = "overlay-website">
+                                
+        </div>
+        <div class = "pax-modal-overlay" id = "pax-modal-overlay">
+            <div class = "adult-children-container">
+                <div class = "container" id = "adult-container">
+                    <div class = "name">Adult</div>
+                    <div style = "color: #E83636" class="minus" id="adult-minus">-</div>
+                    <div id="value">0</div>
+                    <div style = "color: #E83636" class = "plus" id="adult-plus">+</div>
+                </div>
+                <div class = "container" id = "children-container">
+                    <div class = "name">Children</div>
+                    <div style = "color: #E83636" class="minus" id="children-minus">-</div>
+                    <div id="value">0</div>
+                    <div style = "color: #E83636" class = "plus" id="children-plus">+</div>
+                </div>
+            </div>
+            <div class = "close-btn" id = "close-btn">Close</div>
+        </div>
 
         <!-- Assign links to button -->
         <script type="module">
-            import { start } from "../js/Main.js";
+            import { start } from "../js/Reservation.js";
             start();
         </script>
 
