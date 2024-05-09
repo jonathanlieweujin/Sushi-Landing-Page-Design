@@ -26,7 +26,7 @@ import {
     DONMONO_SRC
 } from './Constants.js';
 
-let itemPrice, itemID, itemQuantity;
+let itemPrice, itemID, itemQuantity, itemSrc;
 
 function start() { 
     assignNextPageLink(document.querySelectorAll('#ref-btns')); 
@@ -176,6 +176,7 @@ function start() {
             itemPrice = price;
             itemID = name;
             itemQuantity = 1;
+            itemSrc = imageSrc;
         });
     });
 
@@ -268,23 +269,24 @@ function addToCart() {
     let itemExists = false;
     // Iterate over each line to check if item exists
     for (let i = 0; i < cartItems.length; i++) {
-        const [existingItemId, existingQuantity] = cartItems[i].split(' ');
+        let [existingItemId, existingQuantity, existingPrice, existingSrc] = cartItems[i].split(' ');
 
         // If item exists, update its quantity
         if (existingItemId === itemID) {
             const newQuantity = parseInt(existingQuantity) + itemQuantity;
-            cartItems[i] = `${existingItemId} ${newQuantity}`;
+            cartItems[i] = `${existingItemId} ${newQuantity} ${existingPrice} ${existingSrc}`;
             itemExists = true;
             break;
         }
     }
     // If item doesn't exist, add a new line with the item and its quantity
     if (!itemExists) {
-        cartItems.push(`${itemID} ${itemQuantity}`);
+        cartItems.push(`${itemID} ${itemQuantity} ${itemPrice} ${itemSrc}`);
     }
     // Update the content of the cart in localStorage
     localStorage.setItem('cart', cartItems.join('\n'));
 }
+
 
 function openModal() {
     window.scrollTo(0, 0);

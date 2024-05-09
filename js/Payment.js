@@ -5,6 +5,8 @@ let mode = "CARD";
 function start() { 
     assignNextPageLink(document.querySelectorAll('#ref-btns')); 
 
+    const totalPrice = localStorage.getItem('totalPrice');
+    document.getElementById("payment-total").innerHTML = "Total: RM " + totalPrice;
     // allow only one to be checked
     const checkboxCard = document.querySelector('.checkbox-card');
     const checkboxQR = document.querySelector('.checkbox-qr');
@@ -16,7 +18,7 @@ function start() {
             checkboxQR.checked = false;
             paymentContainer.style.display = "flex";
             qrContainer.style.display = "none";
-            mode = "CARD"
+            mode = "CARD";
         }
         else {
             checkboxCard.checked = true;
@@ -28,7 +30,7 @@ function start() {
             checkboxCard.checked = false;
             qrContainer.style.display = "flex";
             paymentContainer.style.display = "none";
-            mode = "QR"
+            mode = "QR";
         } else {
             checkboxQR.checked = true;
         }
@@ -105,6 +107,7 @@ function displaySuccess(){
         document.getElementById("check-icon").style.display = "block";
         await delay(3000); // Wait for 1 second
         localStorage.setItem('cart', '');
+        localStorage.setItem('totalPrice', 0);
         await delay(1000); // Wait for 3 seconds
         window.location.href = _LANDING_PAGE_LINKS.Home;
     }
