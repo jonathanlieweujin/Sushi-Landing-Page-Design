@@ -71,6 +71,10 @@ function start() {
         const childrenCount = parseInt(document.getElementById('children-container').querySelector('#value').textContent);
         paxValueElement.textContent = `${adultCount} adult ${childrenCount} children`;
     }
+
+    document.getElementById("reserve-btn").addEventListener("click", function() {
+        displaySuccess();
+    })
 }
 
 function openModal() {
@@ -85,4 +89,21 @@ function closeModal() {
     document.getElementById('pax-modal-overlay').style.display = 'none';
 }
 
+function displaySuccess(){
+    window.scrollTo(0, 0);
+    document.body.classList.add('stop-scrolling');
+    document.getElementById('overlay-website-2').style.display = 'flex';
+    document.getElementById("check-icon").style.display = "none";
+    const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
+
+    async function executeAnimations() {
+        document.getElementById("check-icon").style.display = "block";
+        await delay(3000); // Wait for 1 second
+        await delay(1000); // Wait for 3 seconds
+        document.body.classList.remove('stop-scrolling');
+        document.getElementById('overlay-website-2').style.display = 'none';
+    }
+    executeAnimations();
+    
+}
 export {start};
